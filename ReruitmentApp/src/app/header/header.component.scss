@@ -1,0 +1,57 @@
+@import 'variables';
+
+nav{
+    border-bottom: 1px solid $light-text ;
+    overflow: hidden;
+    height:90px;
+}
+
+.logo{
+    font-size: 2em;
+    padding: 40px;
+    float:left;
+    color:$light-text;
+    font-family: $second-font;
+}
+
+.navigation{
+    margin-left: auto;
+    width:max-content;
+    margin-right: 5%;
+    font-weight: 500;
+    height: 100px;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.navigation  li {
+    float: left;
+}
+
+.navigation li a {
+    display: block;
+    width: 100px;
+    padding:40px 0;
+    text-align: center;
+    transition-duration: 300ms;
+}
+
+.navigation li .active {
+    color:$light-blue;
+ }
+
+.navigation li  :hover {
+    background-color: $gray;
+}
+.search {
+    
+    background-color: $search;
+}
+.search .material-icons{
+    font-size:30px;
+    
+}
