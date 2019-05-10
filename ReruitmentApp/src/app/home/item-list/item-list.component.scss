@@ -1,0 +1,12 @@
+@import 'variables';
+
+.item{
+    float:left;
+    margin-right: $main-margin;
+    margin-bottom: $main-margin;
+    background-color: $white;
+}
+
+.itemList{
+    display: table;
+}
