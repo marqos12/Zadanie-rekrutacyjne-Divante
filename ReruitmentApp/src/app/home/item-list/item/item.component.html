@@ -1,5 +1,7 @@
 <div class="card" *ngIf="initialized">
-  <img [src]="_item.image" alt="image">
+  <div class="image">
+      <img [src]="_item.image" alt="image">
+  </div>
   <div class="content">
     <h3>{{_item.title}}</h3>
     <p>{{_item.description}}</p>

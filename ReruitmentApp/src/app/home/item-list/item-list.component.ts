@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/shared/service/api.service';
 import { Item } from 'src/app/shared/class/class';
+import { NgxSpinnerService } from 'ngx-spinner';
+
 
 @Component({
   selector: 'app-item-list',
@@ -12,12 +14,20 @@ export class ItemListComponent implements OnInit {
 
   items:Item[] = [];
 
-  constructor(private router: Router, private apiService:ApiService) { }
+  constructor(private router: Router, private apiService:ApiService,private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
+
+    this.spinner.show();
+ 
+    setTimeout(() => {
+        this.spinner.hide();
+    }, 1000);
+
     this.apiService.getItems().subscribe(
       x=>{
         this.items=x;
+        //this.spinner.hide();
       }
     );
   }
@@ -25,5 +35,7 @@ export class ItemListComponent implements OnInit {
   itemDetails(item:Item){
     this.router.navigate(['/home/item',item.id]);
   }
+
+  
 
 }

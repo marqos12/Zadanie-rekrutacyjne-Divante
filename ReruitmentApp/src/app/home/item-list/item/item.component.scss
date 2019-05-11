@@ -4,9 +4,13 @@
     min-height:400px;
 }
 
-img{
+.image{
     width:300px;
+    overflow: hidden;
+}
 
+img{
+    height:300px;
 }
 
 .content{

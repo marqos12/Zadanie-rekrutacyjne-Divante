@@ -15,7 +15,6 @@ export class ItemComponent implements OnInit {
     set allowDay(value: Item) {
     this._item = value;
     this.initialized = true;
-    console.log(value);
 }
 
   constructor() { }
