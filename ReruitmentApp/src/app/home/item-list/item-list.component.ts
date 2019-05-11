@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/shared/service/api.service';
+import { Item } from 'src/app/shared/class/class';
 
 @Component({
   selector: 'app-item-list',
@@ -8,15 +10,20 @@ import { Router } from '@angular/router';
 })
 export class ItemListComponent implements OnInit {
 
-  items = [1,2,3,4,5,6,7];
+  items:Item[] = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private apiService:ApiService) { }
 
   ngOnInit() {
+    this.apiService.getItems().subscribe(
+      x=>{
+        this.items=x;
+      }
+    );
   }
 
-  itemDetails(item){
-    this.router.navigate(['/home/item',1]);
+  itemDetails(item:Item){
+    this.router.navigate(['/home/item',item.id]);
   }
 
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from 'src/app/shared/class/class';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ApiService } from 'src/app/shared/service/api.service';
 
 @Component({
   selector: 'app-item-details',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemDetailsComponent implements OnInit {
 
-  constructor() { }
+  item:Item;
+  initialized = false;
+  constructor(
+    private route: ActivatedRoute, private api: ApiService) { }
 
   ngOnInit() {
+     this.route.paramMap.subscribe((params) => {
+      let id = params.get('id');
+      this.api.getItem(id).subscribe(x=>{
+        this.item=x;
+        this.initialized=true;
+      })
+    });
+  }
+
+  onAdd(){
+
   }
 
 }

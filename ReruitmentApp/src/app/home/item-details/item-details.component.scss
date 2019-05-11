@@ -13,7 +13,6 @@ img{
     background-color: $light-blue;
     color:$white;
     padding:$main-margin;
-    display: inline-block;
 }
 
 .firstColumn{
@@ -26,7 +25,7 @@ img{
 }
 
 .secondColumn div{    
-    transform: translate(25%,100%);
+    transform: translate(25%,25%);
 }
 
 .secondColumn button{
