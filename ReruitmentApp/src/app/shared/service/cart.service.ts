@@ -24,5 +24,9 @@ export class CartService {
     return this.items;
   }
 
+  public isAdded(item):boolean{
+   return (this.items.filter(x=>x.id==item.id).length>0)
+  }
+
 
 }

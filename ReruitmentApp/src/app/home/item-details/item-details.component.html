@@ -13,7 +13,7 @@
     </div>
     <div class="secondColumn">
       <div>
-          <button (click)="onAdd()">Add to Cart</button>
+          <button (click)="onAdd()"  [ngClass]="{'disabled':added==true}"[disabled]="added">Add to Cart</button>
       </div>
     </div>
   </div>
