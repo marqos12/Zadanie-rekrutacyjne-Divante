@@ -4,3 +4,4 @@ API wykorzystaywane w projekcie, wystawione zostało dzięki JSON-server, urucho
 
 `json-server --watch item.json `
 
+Aby zainstalować JSON-server można użyć polecenia `npm install -g json-server`
