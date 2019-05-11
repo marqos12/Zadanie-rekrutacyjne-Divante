@@ -15,11 +15,11 @@ nav{
 }
 
 .navigation{
-    margin-left: auto;
-    width:fit-content;
-    margin-right: 5%;
+    
     font-weight: 500;
     height: 100px;
+    right: 10px;
+    position: absolute;
 }
 
 .navigation ul {
@@ -59,3 +59,32 @@ nav{
 a{
     color:$black;
 }
+@media only screen and (max-width: 901px) {
+    nav{
+        overflow: visible;
+    }
+    .logo{
+        padding: 15px;
+    }
+    button{
+        border-color: $dark-text;
+    }
+    .navigation{
+        left:0;
+        right: none;
+        width: 100%;
+        height: fit-content;
+        z-index: 999;
+        top:100px;
+        background-color: $white;
+    }
+    .navigation li a {
+        
+        width: 100%;
+        padding:10px 0;
+        
+    }
+    .navigation  li {
+        float: none;
+    }
+  }

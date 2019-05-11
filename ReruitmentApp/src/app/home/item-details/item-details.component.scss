@@ -29,11 +29,34 @@ img{
 }
 
 .secondColumn button{
-    width:50%;
+    
     padding: 15px 70px;
     background-color: $accent;
     border:none;
     color:$white;
     font-size:1.2em;
     font-weight: 500;
+}
+
+
+@media only screen and (max-width: 876px) {
+    .content{
+        width:100%;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .content{
+        width:100%;
+    }
+    .image{
+        
+    height: auto;
+    }
+}
+@media only screen and (max-width: 1300px) {
+
+    .firstColumn{
+        float:none;
+        width:100%;
+    }
 }
