@@ -1,0 +1,40 @@
+@import 'variables';
+
+img{
+    width:100%;
+}
+
+.image{
+    height: 600px;
+    overflow: hidden;
+}
+
+.description{
+    background-color: $light-blue;
+    color:$white;
+    padding:$main-margin;
+    display: inline-block;
+}
+
+.firstColumn{
+    float:left;
+    width:50%;
+}
+
+.secondColumn{
+    display: grid;
+}
+
+.secondColumn div{    
+    transform: translate(25%,100%);
+}
+
+.secondColumn button{
+    width:50%;
+    padding: 15px 70px;
+    background-color: $accent;
+    border:none;
+    color:$white;
+    font-size:1.2em;
+    font-weight: 500;
+}

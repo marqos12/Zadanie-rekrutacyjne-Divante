@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { SideMenuComponent } from './home/side-menu/side-menu.component';
 import { ItemComponent } from './home/item-list/item/item.component';
 import { ItemListComponent } from './home/item-list/item-list.component';
+import { ItemDetailsComponent } from './home/item-details/item-details.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { ItemListComponent } from './home/item-list/item-list.component';
     HomeComponent,
     SideMenuComponent,
     ItemComponent,
-    ItemListComponent
+    ItemListComponent,
+    ItemDetailsComponent,
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

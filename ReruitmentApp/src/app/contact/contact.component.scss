@@ -1,0 +1,38 @@
+@import 'variables';
+
+.content{
+    padding: $main-margin;
+    background-color: $white;
+    width:50%;
+    margin: auto;
+    text-align: center;
+    color:$light-text;
+}
+
+.circle{
+    
+    margin: 0 auto;
+    color:$light-blue;
+    width:100px;
+    height:100px;
+    border: 2px solid $light-blue;
+    border-radius: 50px;
+    text-align: left;
+    margin-bottom: $main-margin;
+}
+
+.circle .material-icons{
+    font-size: 60px;
+    transform: translate(35%,35%)
+}
+
+h1{
+    color:$dark-text;
+}
+
+p{
+    margin:0 auto;
+    width:75%;
+    line-height: 1.5em;
+    font-size: 1.2em;
+}

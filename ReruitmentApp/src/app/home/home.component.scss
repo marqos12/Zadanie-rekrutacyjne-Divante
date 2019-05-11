@@ -2,4 +2,9 @@
 aside{
     float:left;
     margin-right: $main-margin;
+    width:300px;
+}
+section{
+    display: inline-block;
+    width: calc(100% - 400px);
 }
