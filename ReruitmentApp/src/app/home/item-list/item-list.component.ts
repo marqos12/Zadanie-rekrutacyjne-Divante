@@ -13,7 +13,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class ItemListComponent implements OnInit {
 
   items:Item[] = [];
-
+  failed=false;
   constructor(private router: Router, private apiService:ApiService,private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
@@ -28,6 +28,10 @@ export class ItemListComponent implements OnInit {
       x=>{
         this.items=x;
         //this.spinner.hide();
+      },
+      e=>{
+        console.log("Proszę włączyć api za pomocą `json-server /api/item.json`")
+        this.failed=true;
       }
     );
   }
@@ -36,6 +40,6 @@ export class ItemListComponent implements OnInit {
     this.router.navigate(['/home/item',item.id]);
   }
 
-  
+
 
 }

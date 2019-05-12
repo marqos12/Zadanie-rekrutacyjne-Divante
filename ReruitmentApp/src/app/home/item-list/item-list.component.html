@@ -2,4 +2,7 @@
     <div class="item" *ngFor="let item of items" (click)="itemDetails(item)">
       <app-item [item]="item" ></app-item>
     </div>
+    <div *ngIf="failed">
+      <h3>Brak połączenia z API ( ͡° ʖ̯ ͡°)</h3>
+    </div>
 </div>

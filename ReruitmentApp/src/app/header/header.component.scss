@@ -12,6 +12,7 @@ nav{
     float:left;
     color:$light-text;
     font-family: $second-font;
+    cursor: pointer;
 }
 
 .navigation{
@@ -19,7 +20,9 @@ nav{
     font-weight: 500;
     height: 100px;
     right: 10px;
-    position: absolute;
+    margin-left: auto;
+    margin-right: 50px;
+    display: table;
 }
 
 .navigation ul {
@@ -59,32 +62,3 @@ nav{
 a{
     color:$black;
 }
-@media only screen and (max-width: 901px) {
-    nav{
-        overflow: visible;
-    }
-    .logo{
-        padding: 15px;
-    }
-    button{
-        border-color: $dark-text;
-    }
-    .navigation{
-        left:0;
-        right: none;
-        width: 100%;
-        height: fit-content;
-        z-index: 999;
-        top:100px;
-        background-color: $white;
-    }
-    .navigation li a {
-        
-        width: 100%;
-        padding:10px 0;
-        
-    }
-    .navigation  li {
-        float: none;
-    }
-  }
