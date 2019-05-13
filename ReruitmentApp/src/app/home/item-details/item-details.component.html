@@ -1,19 +1,17 @@
 <div *ngIf="initialized">
   <div class="image">
-      <img
-      [src]="item.image"
-      alt="image" />
-    
+    <img [src]="item.image" alt="image" />
+
   </div>
   <div class="description">
     <div class="firstColumn">
       <h3>{{item.title}}</h3>
       <p>{{item.description}}</p>
-          
+
     </div>
     <div class="secondColumn">
       <div>
-          <button (click)="onAdd()"  [ngClass]="{'disabled':added==true}"[disabled]="added">Add to Cart</button>
+        <button (click)="onAdd()" [ngClass]="{'disabled':added==true}" [disabled]="added">Add to Cart</button>
       </div>
     </div>
   </div>

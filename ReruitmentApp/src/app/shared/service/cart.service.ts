@@ -8,25 +8,23 @@ import { ItemListComponent } from 'src/app/home/item-list/item-list.component';
 })
 export class CartService {
 
-  items:Item[]=[];
+  items: Item[] = [];
 
   private newItemSource = new Subject<Item[]>();
   public newItem = this.newItemSource.asObservable();
 
   constructor() { }
 
-  public addItem(item:Item){
+  public addItem(item: Item) {
     this.items.push(item);
     this.newItemSource.next(this.items);
   }
 
-  public getItems():Item[]{
+  public getItems(): Item[] {
     return this.items;
   }
 
-  public isAdded(item):boolean{
-   return (this.items.filter(x=>x.id==item.id).length>0)
+  public isAdded(item): boolean {
+    return (this.items.filter(x => x.id == item.id).length > 0)
   }
-
-
 }

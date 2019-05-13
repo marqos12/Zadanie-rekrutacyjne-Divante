@@ -8,14 +8,14 @@ import { Item } from 'src/app/shared/class/class';
 })
 export class ItemComponent implements OnInit {
 
-  _item:Item;
-  initialized:boolean=false;
+  _item: Item;
+  initialized: boolean = false;
 
   @Input('item')
-    set allowDay(value: Item) {
+  set allowDay(value: Item) {
     this._item = value;
     this.initialized = true;
-}
+  }
 
   constructor() { }
 

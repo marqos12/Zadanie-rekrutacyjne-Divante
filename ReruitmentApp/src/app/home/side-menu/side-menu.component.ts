@@ -9,13 +9,13 @@ import { Item } from 'src/app/shared/class/class';
 })
 export class SideMenuComponent implements OnInit {
 
-  items:Item[]=[];
+  items: Item[] = [];
 
-  constructor(private cartService:CartService) { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
-    this.items=this.cartService.getItems();
-    this.cartService.newItem.subscribe(x=>{
+    this.items = this.cartService.getItems();
+    this.cartService.newItem.subscribe(x => {
       this.items = x;
     })
   }

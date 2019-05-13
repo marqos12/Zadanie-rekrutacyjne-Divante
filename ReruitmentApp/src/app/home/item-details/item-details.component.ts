@@ -12,34 +12,34 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class ItemDetailsComponent implements OnInit {
 
-  item:Item;
+  item: Item;
   initialized = false;
-  added=false;
+  added = false;
   constructor(
-    private route: ActivatedRoute, private api: ApiService,private cartService:CartService,private spinner: NgxSpinnerService) { }
+    private route: ActivatedRoute, private api: ApiService, private cartService: CartService, private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
     this.spinner.show();
- 
+
     setTimeout(() => {
-        this.spinner.hide();
+      this.spinner.hide();
     }, 1000);
 
 
-     this.route.paramMap.subscribe((params) => {
+    this.route.paramMap.subscribe((params) => {
       let id = params.get('id');
-      this.api.getItem(id).subscribe(x=>{
-        this.item=x;
-        this.added=this.cartService.isAdded(this.item);
-        this.initialized=true;
+      this.api.getItem(id).subscribe(x => {
+        this.item = x;
+        this.added = this.cartService.isAdded(this.item);
+        this.initialized = true;
 
       })
     });
   }
 
-  onAdd(){
-      this.cartService.addItem(this.item);
-      this.added=true;
+  onAdd() {
+    this.cartService.addItem(this.item);
+    this.added = true;
   }
 
 }

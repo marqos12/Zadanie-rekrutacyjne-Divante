@@ -1,18 +1,19 @@
 <div class="card">
   <div>
     <div class="cardHeader"><i class="material-icons">perm_contact_calendar</i>
-    <h3 class="contact">Contact</h3></div>
+      <h3 class="contact">Contact</h3>
+    </div>
     <p>Coffee decaffeinated strong beans est eu sit turkish. Steamed doppio, cinnamon cup frappuccino whipped seasona
     </p>
   </div>
   <div>
     <div class="cardHeader">
       <i class="material-icons">shopping_cart</i>
-      <h3>Cart {{(items.length>0)?('( '+items.length+' )'):''}}</h3> 
+      <h3>Cart {{(items.length>0)?('( '+items.length+' )'):''}}</h3>
     </div>
     <div class="cart" [ngClass]="{'centered':items.length==0}">
-      <div class="cartSpan"*ngIf="items.length==0">Cart is empty</div>
-      <div class="cartItem" *ngFor="let item of items"><span >{{item.value}} </span>{{item.title}}</div>
+      <div class="cartSpan" *ngIf="items.length==0">Cart is empty</div>
+      <div class="cartItem" *ngFor="let item of items"><span>{{item.value}} </span>{{item.title}}</div>
     </div>
   </div>
 
